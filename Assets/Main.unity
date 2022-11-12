@@ -323,7 +323,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -352,9 +352,9 @@ GameObject:
   - component: {fileID: 218170194}
   - component: {fileID: 218170193}
   - component: {fileID: 218170197}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sky
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,9 +633,9 @@ GameObject:
   - component: {fileID: 329169334}
   - component: {fileID: 329169333}
   - component: {fileID: 329169337}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mt
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -874,7 +874,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -903,9 +903,9 @@ GameObject:
   - component: {fileID: 725942768}
   - component: {fileID: 725942767}
   - component: {fileID: 725942766}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: House
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1177,7 +1177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762545344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 0.86, z: 0}
+  m_LocalPosition: {x: -8.13, y: 0.83, z: 0}
   m_LocalScale: {x: 0.9924946, y: 0.98388773, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1192,9 +1192,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 769183484}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackgroundGroup
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1300,9 +1300,9 @@ GameObject:
   - component: {fileID: 829272807}
   - component: {fileID: 829272806}
   - component: {fileID: 829272805}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: House1
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1435,9 +1435,9 @@ GameObject:
   - component: {fileID: 971316217}
   - component: {fileID: 971316216}
   - component: {fileID: 971316220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mt2
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1815,7 +1815,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352403672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 5.2, z: -0.6105128}
+  m_LocalPosition: {x: -9.33, y: 4.81, z: -0.6105128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2008,9 +2008,9 @@ GameObject:
   - component: {fileID: 1536702049}
   - component: {fileID: 1536702048}
   - component: {fileID: 1536702052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sky2
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
