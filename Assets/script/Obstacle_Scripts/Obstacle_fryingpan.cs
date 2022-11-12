@@ -19,7 +19,7 @@ public class Obstacle_fryingpan : MonoBehaviour
     {
         ImpulseForce();
         MoveToPlayer1();
-        Invoke("Deactive", 3);
+        Invoke("Deactive", 1.5);
         //Invoke("Active", 3);
     }
 
