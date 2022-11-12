@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     Animator anim;
 
     public gameManager GameManager;
+    public Obstacle_left_and_right bird;
     public int playerSpeed;
     public float jumpPower = 700.0f;
 
@@ -52,8 +53,7 @@ public class PlayerMove : MonoBehaviour
             rigid.velocity = rigid.velocity*0.5f;
         anim.SetBool("Grounded", isGrounded);
 
-        Slide();
-        OnDamaged();
+        Captured();
         }
 
     void Slide(){
@@ -64,11 +64,7 @@ public class PlayerMove : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag =="Obstacle"){
             //GameManager.donutPoint -=1;
-            GameManager.DonutDown();
-
-            //플레이어 튕겨서 1초동안 멈춰서 놀라기
-            //OnDamaged();
-            Debug.Log("부딪힘");
+            OnDamaged();
         }
         
         else if(collision.gameObject.tag =="floor"){
@@ -79,26 +75,44 @@ public class PlayerMove : MonoBehaviour
             }
 
         }
+
+        
     }
 
     void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.tag =="floor")
         isGrounded =false;
-
     }
     
     void OnDamaged(){
         //투명하게 하기
         //놀라는 표정 애니메이션 추가 필요!!
-        GameManager.isPause = true;
-     //   GameManager.Pause();
-        //Invoke("Pause",50);
+        GameManager.DonutDown();
+        Debug.Log("부딪힘");
+        gameObject.layer = 9;
+        //놀라는 표정
+        anim.SetTrigger("Damaged");
+        Invoke("OffDamaged",3);
+    }
+    void OffDamaged(){
+        gameObject.layer =8;
     }
 
     public void OnDie() {
+
         //1. 뒤에 시간 멈추기
         GameManager.isPause = true;
         GameManager.End();
     }
+
+    public void Captured(){
+        if(transform.position.x < -10.5f){
+            OnDie();
+            // 시간되면 엔딩신 하나 더 만들기
+        }
+    }
+
+    
 }
 
    
