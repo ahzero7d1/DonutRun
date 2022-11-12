@@ -1039,6 +1039,7 @@ GameObject:
   - component: {fileID: 762545347}
   - component: {fileID: 762545346}
   - component: {fileID: 762545345}
+  - component: {fileID: 762545351}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1183,6 +1184,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &762545351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762545344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37d1e08319f20b42994324654a1a30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 0
+  GameManager: {fileID: 0}
+  jumpPower: 0
+  doublejump: 0
+  defaultRay: 0
 --- !u!1 &769183483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1850,8 @@ GameObject:
   - component: {fileID: 1358250222}
   - component: {fileID: 1358250221}
   - component: {fileID: 1358250223}
-  - component: {fileID: 1358250224}
+  - component: {fileID: 1358250225}
+  - component: {fileID: 1358250226}
   m_Layer: 0
   m_Name: Donutground
   m_TagString: Untagged
@@ -1898,7 +1917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358250220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.12, y: -0.78, z: 0}
+  m_LocalPosition: {x: 24.9, y: -0.06, z: 0}
   m_LocalScale: {x: 0.4627958, y: 0.42770195, z: 0.4627958}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1930,7 +1949,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.140562, y: 4.122628}
   m_EdgeRadius: 0
---- !u!114 &1358250224
+--- !u!50 &1358250225
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358250220}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1358250226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1939,11 +1979,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1358250220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8d693e46bec4017aee008ed21e9533, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e973f15f3bf9b54bb8a4ff01b888a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacles:
-  - {fileID: 1358250220}
+  speed: 5
+  startPosition: 0
+  endPosition: 0
 --- !u!1 &1370222687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   donutPoint: 0
+  isPause: 0
 --- !u!4 &1454341959
 Transform:
   m_ObjectHideFlags: 0
