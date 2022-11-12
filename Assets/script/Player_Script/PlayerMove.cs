@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D rigid;
+    SpriteRenderer sprite;
 
     public int playerSpeed;
     public gameManager GameManager;
@@ -17,6 +18,7 @@ public class PlayerMove : MonoBehaviour
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -61,8 +63,16 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag =="obstacle"){
+            GameManager.donutPoint -=1;
+            //플레이어 튕겨서 1초동안 멈춰서 놀라기
+            
 
         }
+    }
+    
+    void OnDamaged(Vector2 targetPos){
+        int dirc = transform.position.x - targetPos.x > 0 ?1:-1;
+        rigid.AddForce(new Vector2(dirc,1),ForceMode2D.Impulse);
     }
 
    
