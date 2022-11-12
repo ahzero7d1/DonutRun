@@ -31,7 +31,7 @@ public class Obstacle_left_and_right : MonoBehaviour
             switc = false;
             spriteRenderer.flipX = false;
         }
-        if (transform.position.x <= pos.x - 2)
+        if (transform.position.x <= pos.x - 4)
         {
             switc = true;
             spriteRenderer.flipX = true;
