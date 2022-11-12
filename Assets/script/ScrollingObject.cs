@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrollingObject : MonoBehaviour
 {
-    public float speed = 10f; // moving speed
+    public float speed;// moving speed
 
     // Start is called before the first frame update
     void Start()
