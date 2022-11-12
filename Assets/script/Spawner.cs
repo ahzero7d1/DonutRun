@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
 
     void RandomTime()
     {
-        TimeBetweenSpawn = Random.Range(3, 7);
+        TimeBetweenSpawn = Random.Range(1, 7);
     }
 
 }
