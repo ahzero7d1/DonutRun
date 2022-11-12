@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D rigid;
     SpriteRenderer sprite;
+    Animator anim;
 
     public int playerSpeed;
     public gameManager GameManager;
@@ -20,6 +21,7 @@ public class PlayerMove : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,27 +35,36 @@ public class PlayerMove : MonoBehaviour
     void Update(){
         Jump();
         Slide();
+        OnDamaged();
 
         
         }
 
-    void Jump(){
-        //이단점프까지만 되도록 하기
-        if(Input.GetButtonDown("Jump")){//doublejump가 false인 경우 1단점프
-            Debug.DrawRay(rigid.position, Vector3.down, new Color(0,1,0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position,Vector3.down,1,LayerMask.GetMask("platform"));
-            Debug.Log(rayHit.distance);
-
-            if(rayHit.distance==0 && rayHit.distance < 0.7f ){//jumpPower 고려해서 바꾸기
+        void Jump(){
+            //이단점프까지만 되도록 하기
+            if(Input.GetButtonDown("Jump")){//doublejump가 false인 경우 1단점프
                 rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
-                doublejump = true;}
+               
 
-            else if((rayHit.distance == 0f || rayHit.distance > 0.7f ) && doublejump ){//doublejump가 true인 경우 2단 점프
-                rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
-                doublejump = false;
+                
+
+
+                Debug.DrawRay(rigid.position, Vector3.down, new Color(0,1,0));
+                RaycastHit2D rayHit = Physics2D.Raycast(rigid.position,Vector3.down,1,LayerMask.GetMask("platform"));
+                Debug.Log(rayHit.distance);
+                
+
+                //if( doublejump == false ){//jumpPower 고려해서 바꾸기
+                    //rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
+                    //doublejump = true;}
+
+                //else if((rayHit.distance == 0f || rayHit.distance > 0.7f ) && doublejump ){//doublejump가 true인 경우 2단 점프
+                    //rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
+                    //doublejump = false;
             }
+            //땅이랑 안 닿아있으면 Setbool = true, 아니면 false
         }  
-    }
+    
 
     void Slide(){
         if(Input.GetKey(KeyCode.DownArrow))
@@ -61,12 +72,12 @@ public class PlayerMove : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag =="obstacle"){
+        if(collision.gameObject.tag =="Obstacle"){
             GameManager.donutPoint -=1;
             //플레이어 튕겨서 1초동안 멈춰서 놀라기
             OnDamaged();
-
         }
+
     }
     
     void OnDamaged(){
@@ -75,6 +86,7 @@ public class PlayerMove : MonoBehaviour
         GameManager.isPause = true;
         Invoke("Pause",1);
     }
+}
 
    
-}
+
