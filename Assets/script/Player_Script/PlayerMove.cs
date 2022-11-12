@@ -40,15 +40,11 @@ public class PlayerMove : MonoBehaviour
         
         }
 
-        void Jump(){
+    void Jump(){
             //이단점프까지만 되도록 하기
-            if(Input.GetButtonDown("Jump")){//doublejump가 false인 경우 1단점프
+         if(Input.GetButtonDown("Jump")){//doublejump가 false인 경우 1단점프
                 rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
                
-
-                
-
-
                 Debug.DrawRay(rigid.position, Vector3.down, new Color(0,1,0));
                 RaycastHit2D rayHit = Physics2D.Raycast(rigid.position,Vector3.down,1,LayerMask.GetMask("platform"));
                 Debug.Log(rayHit.distance);
