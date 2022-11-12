@@ -48,7 +48,8 @@ public class PlayerMove : MonoBehaviour
 
             if(rayHit.distance > 0.4f && rayHit.distance < 0.7f ){//jumpPower 고려해서 바꾸기
                 rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
-                doublejump = true;}
+                doublejump = true;
+                }
 
             else if((rayHit.distance == 0f || rayHit.distance > 0.7f ) && doublejump ){//doublejump가 true인 경우 2단 점프
                 rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
