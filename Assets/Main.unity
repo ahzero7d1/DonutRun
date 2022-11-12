@@ -217,9 +217,9 @@ GameObject:
   - component: {fileID: 116056281}
   - component: {fileID: 116056280}
   - component: {fileID: 116056284}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor2
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -4.0507746}
+  m_Offset: {x: 0, y: -4.221445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -337,7 +337,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 2.698451}
+  m_Size: {x: 19.2, y: 2.3571098}
   m_EdgeRadius: 0
 --- !u!1 &218170192
 GameObject:
@@ -802,9 +802,9 @@ GameObject:
   - component: {fileID: 332204066}
   - component: {fileID: 332204065}
   - component: {fileID: 332204069}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,7 +911,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -4.069972}
+  m_Offset: {x: 0, y: -4.2032757}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -922,7 +922,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 2.660056}
+  m_Size: {x: 19.2, y: 2.39345}
   m_EdgeRadius: 0
 --- !u!1 &725942765
 GameObject:
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 0
   GameManager: {fileID: 0}
-  jumpPower: 0
+  jumpPower: 5
   doublejump: 0
   defaultRay: 0
 --- !u!70 &762545347
