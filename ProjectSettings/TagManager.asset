@@ -20,9 +20,9 @@ TagManager:
   - 
   - platform
   - 
-  - enemy_typeA
-  - enemy_typeB
-  - frypan
+  - obstacle
+  - 
+  - 
   - 
   - 
   - 

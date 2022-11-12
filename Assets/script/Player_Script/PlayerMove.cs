@@ -57,8 +57,13 @@ public class PlayerMove : MonoBehaviour
     void Slide(){
         if(Input.GetKey(KeyCode.DownArrow))
           Debug.Log("슬라이드를 했습니다."); //이거는 sprite 이미지 받고 collider 변경해서 넣기
-          
-
     }
-          
+
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag =="obstacle"){
+
+        }
+    }
+
+   
 }
