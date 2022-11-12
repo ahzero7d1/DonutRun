@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D rigid;
+    
     SpriteRenderer sprite;
     Animator anim;
 
@@ -78,6 +79,7 @@ public class PlayerMove : MonoBehaviour
     
     void OnDamaged(){
         rigid.AddForce(new Vector2(-1,1),ForceMode2D.Impulse);
+        //투명하게 하기
         //놀라는 표정 애니메이션 추가 필요!!
         GameManager.isPause = true;
         Invoke("Pause",1);
