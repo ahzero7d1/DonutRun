@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int donutPoint;
+
+    void Awake()
     {
-        
+     donutPoint = 6;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
