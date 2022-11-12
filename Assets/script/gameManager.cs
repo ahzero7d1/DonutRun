@@ -41,6 +41,13 @@ public class gameManager : MonoBehaviour
         GameOverImage.Setup();
         Retrybutton.Setup();
     }
+
+    public void Success(){
+        if(isPause == true)
+            Time.timeScale=0;
+
+        
+    }
     
 
     public void DonutDown(){
