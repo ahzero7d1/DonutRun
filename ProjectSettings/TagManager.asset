@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - floor
   layers:
   - Default
   - TransparentFX
@@ -14,14 +15,14 @@ TagManager:
   - UI
   - 
   - 
+  - player
+  - playerDamaged
   - 
+  - platform
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - enemy_typeA
+  - enemy_typeB
+  - frypan
   - 
   - 
   - 
