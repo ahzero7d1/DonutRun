@@ -63,7 +63,11 @@ public class PlayerMove : MonoBehaviour
         if(collision.gameObject.tag =="obstacle"){
             
         }
-            
+
+
+//이단점프까지만 되도록 하기
+    public void Jump(){
+        rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
     }
           
 }

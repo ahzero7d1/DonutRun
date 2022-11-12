@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject frypan;
-    float TimeBetweenSpawn;
+    public float TimeBetweenSpawn;
     float SpawnTime;
 
     void Update()
