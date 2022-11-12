@@ -5,16 +5,27 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject frypan;
-    int second;
+    float TimeBetweenSpawn;
+    float SpawnTime;
 
-    void FixedUpdate()
+    void Update()
     {
-        second = Random.Range(3, 7);
-        Invoke("SpawnPlay", second);
+        RandomTime();
+        if (Time.time > SpawnTime)
+        {
+            Spawn();
+            SpawnTime = Time.time + TimeBetweenSpawn;
+        }
+
     }
 
-    void SpawnPlay()
+    void Spawn()
     {
-        Instantiate(frypan, transform.position);
+        Instantiate(frypan, transform.position, transform.rotation);
+    }
+
+    void RandomTime()
+    {
+        TimeBetweenSpawn = Random.Range(3, 7);
     }
 }
