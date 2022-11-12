@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     public float jumpPower;
     public bool doublejump;
     public float defaultRay;
+    
 
 
 
@@ -62,17 +63,19 @@ public class PlayerMove : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag =="obstacle"){
+        if(collision.gameObject.tag =="Obstacle"){
             GameManager.donutPoint -=1;
             //플레이어 튕겨서 1초동안 멈춰서 놀라기
-            
+            OnDamaged();
 
         }
     }
     
-    void OnDamaged(Vector2 targetPos){
-        int dirc = transform.position.x - targetPos.x > 0 ?1:-1;
-        rigid.AddForce(new Vector2(dirc,1),ForceMode2D.Impulse);
+    void OnDamaged(){
+        rigid.AddForce(new Vector2(-1,1),ForceMode2D.Impulse);
+        //놀라는 표정 애니메이션 추가 필요!!
+        GameManager.isPause = true;
+        Invoke("Pause",1);
     }
 
    
