@@ -1188,6 +1188,7 @@ MonoBehaviour:
   playerSpeed: 0
   GameManager: {fileID: 0}
   jumpPower: 0
+  doublejump: 0
 --- !u!1 &1046989661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,6 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb4e985794f87547b3b27c2f7e717c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frypan: {fileID: 1500838058150673572, guid: ec12341ff4cca494b925b47bddb85260, type: 3}
 --- !u!1 &1051448646
 GameObject:
   m_ObjectHideFlags: 0
