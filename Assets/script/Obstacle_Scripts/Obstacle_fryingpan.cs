@@ -17,8 +17,9 @@ public class Obstacle_fryingpan : MonoBehaviour
 
     void FixedUpdate()
     {
+        ImpulseForce();
         MoveToPlayer1();
-        Invoke("Deactive", 1);
+        Invoke("Deactive", 3);
         //Invoke("Active", 3);
     }
 
@@ -34,7 +35,6 @@ public class Obstacle_fryingpan : MonoBehaviour
 
     void MoveToPlayer1()
     {
-        ImpulseForce();
         rigid.AddForce(Vector2.right * force, ForceMode2D.Impulse);
     }
 

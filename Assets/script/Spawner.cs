@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public float TimeBetweenSpawn;
     float SpawnTime;
 
-    void Update()
+    void FixedUpdate()
     {
         RandomTime();
         if (Time.time > SpawnTime)
@@ -26,6 +26,7 @@ public class Spawner : MonoBehaviour
 
     void RandomTime()
     {
-        TimeBetweenSpawn = Random.Range(3, 7);
+        TimeBetweenSpawn = Random.Range(1, 7);
     }
+
 }
