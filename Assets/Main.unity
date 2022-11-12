@@ -3605,7 +3605,7 @@ TilemapRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 30.214025, y: 25.205, z: 0}
+  m_ChunkCullingBounds: {x: 11.4800005, y: 11.44, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -5181,7 +5181,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 2159, y: 34, z: 0}
+  - first: {x: 2194, y: 33, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -5241,6 +5241,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 2203, y: 39, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 2222, y: 39, z: 0}
     second:
       serializedVersion: 2
@@ -5291,16 +5301,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 2188, y: 52, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 13
@@ -5316,7 +5316,7 @@ Tilemap:
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 3a95dafb1d99e4f19bcae91607f03b45, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 301903fb693e34aa6a459f6beb39b455, type: 2}
+    m_Data: {fileID: 11400000, guid: 634804f151d8b468b94a5196663169ff, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 13
     m_Data: {fileID: 21300000, guid: bc7f3f80e8ff04e0f8498b8630e8f2eb, type: 3}
@@ -5331,7 +5331,7 @@ Tilemap:
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: 7b1f4a824adbc47b6b69f6f50e2df840, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 2c7725dcbdbeb4937a4a12e9d5acf99c, type: 3}
+    m_Data: {fileID: 21300000, guid: 78bc2291fac7c4c63b0d7a97b197317b, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 168
     m_Data:
