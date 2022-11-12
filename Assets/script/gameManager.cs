@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class gameManager : MonoBehaviour
@@ -12,6 +13,12 @@ public class gameManager : MonoBehaviour
 
     // 도넛 이미지 배열
     public Image[] UIDonut;
+
+    // 엔딩 
+    public GameOverScreen GameOverImage;
+    public GameOverScreen Retrybutton;
+
+
 
     void Awake()
     {
@@ -27,8 +34,12 @@ public class gameManager : MonoBehaviour
     
     public void End(){
         if(isPause == true){
-            Time.timeScale = 0;
+            Time.timeScale = 0;           
         }
+        // 2. 죽었다는 UI image 넣기
+        // -> Deactive / active 해서 / Canvas에 고정
+        GameOverImage.Setup();
+        Retrybutton.Setup();
     }
     
 
@@ -43,5 +54,10 @@ public class gameManager : MonoBehaviour
             Debug.Log("죽었습니다.");
             player.OnDie();
         }
+    }
+
+    public void Restart(){
+        SceneManager.LoadScene("Main");
+
     }
 }

@@ -98,11 +98,6 @@ public class PlayerMove : MonoBehaviour
         //1. 뒤에 시간 멈추기
         GameManager.isPause = true;
         GameManager.End();
-
-        // 2. 죽었다는 UI image 넣기
-        // -> Deactive / active 해서 / Canvas에 고정 
-
-
     }
 }
 
