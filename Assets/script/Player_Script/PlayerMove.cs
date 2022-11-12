@@ -9,37 +9,43 @@ public class PlayerMove : MonoBehaviour
     public int playerSpeed;
     public gameManager GameManager;
     public float jumpPower;
-    private int jumps;
+    public bool doublejump;
 
 
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        doublejump = false;
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         rigid.velocity = new Vector2(playerSpeed,rigid.velocity.y);
-        Debug.DrawRay(rigid.position, Vector3.down, new Color(0,1,0));
-        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position,Vector3.down,1,LayerMask.GetMask("Platform"));
+        
+        
     }
 
     void Update(){
-        jumps = 0;
-        //일단점프
-        if (jumps == 0  && Input.GetButtonDown("Jump")){
-            jumps = jumps +1;
-            Jump();
-            //if 땅이랑 닿으면 점프를 다시 할 수 있도록 - raycast
+
+        //이단점프까지만 되도록 하기
+        if(Input.GetButtonDown("Jump")){//doublejump가 false인 경우 1단점프
+            Debug.DrawRay(rigid.position, Vector3.down, new Color(0,1,0));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position,Vector3.down,1,LayerMask.GetMask("platform"));
+            Debug.Log(rayHit.distance);
+
+            if(rayHit.distance < 0.7f&& rayHit.distance >0.4f){
+                rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
+                doublejump = true;}
+
+            else if((rayHit.distance == 0f || rayHit.distance > 0.7f) && doublejump ){//doublejump가 true인 경우 2단 점프
+                rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
+                doublejump = false;
+            }
+        }  
 
         }
-
+          
     }
-
-//이단점프까지만 되도록 하기
-    public void Jump(){
-        rigid.AddForce(Vector2.up*jumpPower,ForceMode2D.Impulse);
-    }
-}
