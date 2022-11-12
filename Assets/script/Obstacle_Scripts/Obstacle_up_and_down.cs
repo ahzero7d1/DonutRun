@@ -42,7 +42,8 @@ public class Obstacle_left_and_right : MonoBehaviour
 
      void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag =="Player"){
-            rigid.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
+            //rigid.AddForce(Vector2.up * 100f, ForceMode2D.Impulse);
+            gameObject.SetActive(false);
         }
         
     }

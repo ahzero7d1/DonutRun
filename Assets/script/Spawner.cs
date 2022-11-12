@@ -21,12 +21,12 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        Instantiate(frypan, transform.position, transform.rotation);
+        Instantiate(frypan, transform.position, Quaternion.Euler(new Vector3(0,0,-90)));
     }
 
     void RandomTime()
     {
-        TimeBetweenSpawn = Random.Range(1, 7);
+        TimeBetweenSpawn = Random.Range(4, 10);
     }
 
 }

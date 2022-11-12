@@ -11,10 +11,12 @@ public class PlayerMove : MonoBehaviour
     public gameManager GameManager;
     public Obstacle_left_and_right bird;
     public int playerSpeed;
-    public float jumpPower = 700.0f;
+    public float jumpPower;
 
     private int jumpCount =0;
     private bool isGrounded;
+    Vector3 target ;
+    Vector3 targetRespawn ;
 
     
 
@@ -25,7 +27,8 @@ public class PlayerMove : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        jumpPower = 500f;
+        target = new Vector3(-3f,-2f,0f);
+        targetRespawn = new Vector3(-3f,1.5f,0f);
 
     }
 
@@ -42,7 +45,7 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetButtonDown("Jump")&&jumpCount<2){//doublejump가 false인 경우 1단점프
             jumpCount++;
 
-            rigid.velocity = Vector2.zero;
+           rigid.velocity = Vector2.zero;
             //rigid.AddForce(new Vector2(0,jumpPower));
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
 
@@ -51,14 +54,10 @@ public class PlayerMove : MonoBehaviour
         }
         else if(Input.GetButtonUp("Jump")&&rigid.velocity.y>0)
             rigid.velocity = rigid.velocity*0.5f;
-        anim.SetBool("Grounded", isGrounded);
+            anim.SetBool("Grounded", isGrounded);
 
         Captured();
-        }
-
-    void Slide(){
-        if(Input.GetKey(KeyCode.DownArrow))
-          Debug.Log("슬라이드를 했습니다."); //이거는 sprite 이미지 받고 collider 변경해서 넣기
+        Respawn();
     }
 
     void OnCollisionEnter2D(Collision2D collision){
@@ -92,10 +91,14 @@ public class PlayerMove : MonoBehaviour
         gameObject.layer = 9;
         //놀라는 표정
         anim.SetTrigger("Damaged");
+        sprite.color = new Color(1,0.6f,0.6f,0.8f);
         Invoke("OffDamaged",3);
     }
+
     void OffDamaged(){
-        gameObject.layer =8;
+        sprite.color = new Color(1,1,1,1);
+        rigid.gravityScale = 3f;
+        gameObject.layer = 8;
     }
 
     public void OnDie() {
@@ -106,11 +109,19 @@ public class PlayerMove : MonoBehaviour
     }
 
     public void Captured(){
-        if(transform.position.x < -10.5f){
-            OnDie();
+        if(transform.position.x < -7){
+            transform.position = Vector3.MoveTowards(transform.position,target, 1f);
             // 시간되면 엔딩신 하나 더 만들기
         }
     }
+
+    public void Respawn(){
+        if(transform.position.y < -10){
+            OnDamaged();
+            transform.position = Vector3.MoveTowards(transform.position,targetRespawn, 10f);
+            
+
+    }}
 
     
 }
