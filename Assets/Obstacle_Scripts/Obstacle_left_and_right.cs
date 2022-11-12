@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle_left_and_right : MonoBehaviour
+public class Obstacle_up_and_down : MonoBehaviour
 {
     public float speed = 3f;
     bool switc = true;
@@ -29,12 +29,10 @@ public class Obstacle_left_and_right : MonoBehaviour
         if (transform.position.y >= pos.y + 2)
         {
             switc = false;
-            spriteRenderer.flipX = true;
         }
         else if (transform.position.y <= pos.y - 1)
         {
             switc = true;
-            spriteRenderer.flipX = true;
         }
     }
 
