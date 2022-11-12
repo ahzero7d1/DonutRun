@@ -30,7 +30,13 @@ public class PlayerMove : MonoBehaviour
     }
 
     void Update(){
+        Jump();
+        Slide();
 
+        
+        }
+
+    void Jump(){
         //이단점프까지만 되도록 하기
         if(Input.GetButtonDown("Jump")){//doublejump가 false인 경우 1단점프
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0,1,0));
@@ -48,7 +54,13 @@ public class PlayerMove : MonoBehaviour
                 doublejump = false;
             }
         }  
-
-        }
-          
     }
+
+    void Slide(){
+        if(Input.GetKey(KeyCode.DownArrow))
+          Debug.Log("슬라이드를 했습니다."); //이거는 sprite 이미지 받고 collider 변경해서 넣기
+          
+
+    }
+          
+}
