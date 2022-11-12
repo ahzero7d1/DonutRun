@@ -49,7 +49,6 @@ public class PlayerMove : MonoBehaviour
 
         }
 
-    }
 
 //이단점프까지만 되도록 하기
     public void Jump(){
