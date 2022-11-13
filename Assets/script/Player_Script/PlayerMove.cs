@@ -16,7 +16,9 @@ public class PlayerMove : MonoBehaviour
     public float jumpPower;
     // sound clip
     public AudioClip losingDonutClip;  // 장애물과 충돌 시 도넛 잃는 소리
-    public AudioClip jumpClip;  // 점프 소리
+    public AudioClip jumpClip;  // 점프 소리 (1단)
+    public AudioClip jumpClip2;  // 점프 소리 (2단)
+
 
 
     private int jumpCount =0;
@@ -58,7 +60,9 @@ public class PlayerMove : MonoBehaviour
             //Debug.Log("미는힘:" + jumpPower+new Vector2(0,jumpPower));
 
             // sound
-            playerAudio.clip = jumpClip;  // 점프 소리로 변경
+            if(jumpCount == 1)  playerAudio.clip = jumpClip;  // 점프 소리로 변경
+            else if(jumpCount == 2)  playerAudio.clip = jumpClip2;  // 점프 소리로 변경
+
             playerAudio.Play();  // 재생    
 
         }
@@ -73,10 +77,6 @@ public class PlayerMove : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag =="Obstacle"){
             //GameManager.donutPoint -=1;
-            
-            // sound (도넛 차감되는 소리)
-            playerAudio.clip = losingDonutClip;
-            playerAudio.Play();  // 사운드 재생
             OnDamaged();
         }
         
@@ -104,7 +104,9 @@ public class PlayerMove : MonoBehaviour
     }*/
     
     void OnDamaged(){
-        playerAudio = GetComponent<AudioSource>();  // 점프 소리로 다시 변경
+        // sound (도넛 차감되는 소리)
+        playerAudio.clip = losingDonutClip;
+        playerAudio.Play();  // 사운드 재생
 
         //투명하게 하기
         //놀라는 표정 애니메이션 추가 필요!!
