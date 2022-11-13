@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public void FixedUpdate(){
+    /*public void FixedUpdate(){
         Scene scene = SceneManager.GetActiveScene();
         Debug.Log(scene.name);
-        
+
         if(scene.name == "PrologScene"){
             Invoke("ChangeToMain",13f);
         }
-    }
+    }*/
 
     public void ChangeSceneBtnAnim(){
         switch (this.gameObject.name)
@@ -22,13 +22,13 @@ public class ChangeScene : MonoBehaviour
             case "StoryButton":
                 SceneManager.LoadScene("PrologScene");
                 break;
+
+            case "GameButton":
+            SceneManager.LoadScene("Main");
+            break;
         }
     }
 
-    public void ChangeToMain(){
-        SceneManager.LoadScene("Main");
-
-    }
 
 
 
