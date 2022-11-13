@@ -1245,6 +1245,97 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 2.0182915}
   m_EdgeRadius: 0
+--- !u!1 &373864146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373864147}
+  - component: {fileID: 373864150}
+  - component: {fileID: 373864149}
+  - component: {fileID: 373864148}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &373864147
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373864146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1010654383}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 558, y: 244}
+  m_SizeDelta: {x: 790.9647, y: 328.82285}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &373864148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373864146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead3ba0f235ba724a956bf4b203454da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &373864149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373864146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: f4f99698a8a761d428fe8a3ec3e25b77, type: 3}
+    m_FontSize: 100
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &373864150
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373864146}
+  m_CullTransparentMesh: 0
 --- !u!1 &386238043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3816,6 +3907,7 @@ RectTransform:
   m_Children:
   - {fileID: 1103916782}
   - {fileID: 538429839}
+  - {fileID: 373864147}
   m_Father: {fileID: 1370222688}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5974,6 +6066,7 @@ MonoBehaviour:
   donutPoint: 6
   isPause: 0
   player: {fileID: 762545346}
+  happy_text: {fileID: 373864149}
   UIDonut:
   - {fileID: 1653687470}
   - {fileID: 985301529}
@@ -5985,6 +6078,7 @@ MonoBehaviour:
   Retrybutton: {fileID: 1112791974}
   success_Screen: {fileID: 1103916785}
   Successbutton: {fileID: 538429843}
+  happy_text_script: {fileID: 373864148}
   House: {fileID: 725942767}
   House1: {fileID: 829272806}
   Mt: {fileID: 329169334}
