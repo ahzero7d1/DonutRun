@@ -5,7 +5,7 @@ using UnityEngine;
 public class Obstacle_fryingpan : MonoBehaviour
 {
     public float speed = 3f;
-    public float force;
+    public float force =0.1f;
     Rigidbody2D rigid;
     Vector2 startPos;
 
