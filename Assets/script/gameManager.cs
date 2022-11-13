@@ -10,6 +10,7 @@ public class gameManager : MonoBehaviour
     public int donutPoint;
     public bool isPause;
     public PlayerMove player;
+    public Text happy_text;
 
     // 도넛 이미지 배열
     public Image[] UIDonut;
@@ -19,6 +20,7 @@ public class gameManager : MonoBehaviour
     public GameOverScreen Retrybutton;
     public Success_Screen success_Screen;
     public Success_Screen Successbutton;
+    public Success_Text happy_text_script;
 
     //크림존
     public ScrollingObject House;
@@ -84,6 +86,9 @@ public class gameManager : MonoBehaviour
 
         success_Screen.Setup();
         Successbutton.Setup();
+        happy_text.text = "도넛 "+(donutPoint).ToString()+"개 획득!!";
+        happy_text_script.Setup();
+        //happy_text.SetActive(true);
     }
     
 

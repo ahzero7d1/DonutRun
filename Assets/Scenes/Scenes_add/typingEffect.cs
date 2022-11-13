@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class typingEffect : MonoBehaviour
 {
     public Text tx;
-    private string m_text = "아니 이걸 언제 기다리냔 말이야?";
+    private string m_text = "3 2 1";
 
 
     void Start()
@@ -24,10 +24,10 @@ public class typingEffect : MonoBehaviour
         {
             tx.text = m_text.Substring(0, i);
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(1f);
 
 
-        }
+        }//시작할 때 씬 바뀌면서  time 멈추고 끝나면 글자 사라지고 time 멈추기 끝
 
 
 
