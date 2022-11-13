@@ -49,12 +49,19 @@ public class gameManager : MonoBehaviour
     public repeatt Bird17;
     public repeatt Bird18;
 
-
+    // 버튼 클릭 사운드
+    // sound source component
+    private AudioSource btnAudio;
+    // sound clip
+    public AudioClip btnClickClip;  // 장애물과 충돌 시 도넛 잃는 소리
 
     void Awake()
     {
-     donutPoint = 6;
-     isPause = false;
+        donutPoint = 6;
+        isPause = false;
+
+        // sound
+        btnAudio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -156,6 +163,11 @@ public class gameManager : MonoBehaviour
 
     public void Restart(){
         Time.timeScale = 1;
+
+        // 버튼 클릭 사운드
+        btnAudio.clip = btnClickClip;
+        btnAudio.Play();
+
         SceneManager.LoadScene("Main");
     }
 }
