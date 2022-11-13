@@ -2842,6 +2842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucessZone: {fileID: 319142172}
   distance: 0
+  totalDistance: 0
 --- !u!1 &769183483
 GameObject:
   m_ObjectHideFlags: 0
@@ -9033,7 +9034,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fb46fad912e344381fa3ebd1927b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 762545350}
+  dis: {fileID: 762545352}
+  donutPlacement: {x: 0, y: 0, z: 0}
 --- !u!212 &1661494805
 SpriteRenderer:
   m_ObjectHideFlags: 0
