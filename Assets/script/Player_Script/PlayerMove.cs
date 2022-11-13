@@ -7,16 +7,20 @@ public class PlayerMove : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer sprite;
     Animator anim;
+    // sound source component
+    private AudioSource playerAudio;
 
     public gameManager GameManager;
     public Obstacle_left_and_right bird;
     public int playerSpeed;
     public float jumpPower;
+    // sound clip
+    public AudioClip losingDonutClip;  // 장애물과 충돌 시 도넛 잃는 소리
 
     private int jumpCount =0;
     private bool isGrounded;
-    Vector3 target ;
-    Vector3 targetRespawn ;
+    Vector3 target;
+    Vector3 targetRespawn;
 
     
 
@@ -29,6 +33,8 @@ public class PlayerMove : MonoBehaviour
         anim = GetComponent<Animator>();
         target = new Vector3(-3f,-2f,0f);
         targetRespawn = new Vector3(-3f,1.5f,0f);
+        // sound
+        playerAudio = GetComponent<AudioSource>();
 
     }
 
@@ -50,6 +56,9 @@ public class PlayerMove : MonoBehaviour
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
 
             //Debug.Log("미는힘:" + jumpPower+new Vector2(0,jumpPower));
+
+            // sound
+            playerAudio.Play();
 
         }
         else if(Input.GetButtonUp("Jump")&&rigid.velocity.y>0)
@@ -97,6 +106,11 @@ public class PlayerMove : MonoBehaviour
         gameObject.layer = 9;
         //놀라는 표정
         anim.SetTrigger("Damaged");
+
+        // sound (도넛 차감되는 소리)
+        playerAudio.clip = losingDonutClip;
+        playerAudio.Play();  // 사운드 재생
+
         sprite.color = new Color(1,0.6f,0.6f,0.8f);
         Invoke("OffDamaged",3);
     }
@@ -108,7 +122,6 @@ public class PlayerMove : MonoBehaviour
     }
 
     public void OnDie() {
-
         //1. 뒤에 시간 멈추기
         GameManager.isPause = true;
         GameManager.End();
