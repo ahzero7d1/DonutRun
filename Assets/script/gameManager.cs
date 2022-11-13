@@ -18,6 +18,7 @@ public class gameManager : MonoBehaviour
     public GameOverScreen GameOverImage;
     public GameOverScreen Retrybutton;
     public Success_Screen success_Screen;
+    public Success_Screen Successbutton;
 
 
 
@@ -48,8 +49,7 @@ public class gameManager : MonoBehaviour
             Time.timeScale=0;
 
         success_Screen.Setup();
-
-        
+        Successbutton.Setup();
     }
     
 
