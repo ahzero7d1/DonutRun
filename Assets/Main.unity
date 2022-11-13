@@ -1571,7 +1571,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 1297161403
-  m_SortingOrder: 11
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!1 &538429838
 GameObject:
@@ -2585,6 +2585,7 @@ GameObject:
   - component: {fileID: 762545346}
   - component: {fileID: 762545345}
   - component: {fileID: 762545351}
+  - component: {fileID: 762545352}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2827,6 +2828,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &762545352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762545344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b97b9f49269774982aff5dfb5f3ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sucessZone: {fileID: 319142172}
+  distance: 0
 --- !u!1 &769183483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3880,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 1297161403
-  m_SortingOrder: 11
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!1 &1103916781
 GameObject:
@@ -4716,7 +4731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1234863053
 GameObject:
@@ -5952,6 +5967,31 @@ MonoBehaviour:
   Retrybutton: {fileID: 1112791974}
   success_Screen: {fileID: 1103916785}
   Successbutton: {fileID: 538429843}
+  House: {fileID: 0}
+  House1: {fileID: 0}
+  Mt: {fileID: 0}
+  Mt2: {fileID: 0}
+  TileMap: {fileID: 0}
+  CreamZone: {fileID: 0}
+  Bird: {fileID: 0}
+  Bird1: {fileID: 0}
+  Bird2: {fileID: 0}
+  Bird3: {fileID: 0}
+  Bird4: {fileID: 0}
+  Bird5: {fileID: 0}
+  Bird6: {fileID: 0}
+  Bird7: {fileID: 0}
+  Bird8: {fileID: 0}
+  Bird9: {fileID: 0}
+  Bird10: {fileID: 0}
+  Bird11: {fileID: 0}
+  Bird12: {fileID: 0}
+  Bird13: {fileID: 0}
+  Bird14: {fileID: 0}
+  Bird15: {fileID: 0}
+  Bird16: {fileID: 0}
+  Bird17: {fileID: 0}
+  Bird18: {fileID: 0}
 --- !u!4 &1454341959
 Transform:
   m_ObjectHideFlags: 0
@@ -9032,7 +9072,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1297161403
   m_SortingLayer: 3
-  m_SortingOrder: 1000
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: 03f1058b0b60d44589e4c80aa962dcdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
