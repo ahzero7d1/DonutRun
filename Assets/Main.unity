@@ -763,11 +763,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248978051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18, y: 1.34, z: 0}
+  m_LocalPosition: {x: 28.376389, y: -1.323372, z: 26.439047}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 386238044}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &248978057
 Rigidbody2D:
@@ -925,7 +925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &319142173
 MonoBehaviour:
@@ -1290,8 +1290,9 @@ Transform:
   - {fileID: 402283080}
   - {fileID: 1266629479}
   - {fileID: 1153990562}
+  - {fileID: 248978056}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &402283073
 GameObject:
@@ -2644,8 +2645,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.7350407, y: -2.2287102}
-  m_Size: {x: 5.758968, y: 7.3163943}
+  m_Offset: {x: 1.7350407, y: -1.8272316}
+  m_Size: {x: 5.758968, y: 6.5134373}
   m_Direction: 0
 --- !u!50 &762545348
 Rigidbody2D:
@@ -3305,7 +3306,7 @@ Transform:
   m_Children:
   - {fileID: 1624903605}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971316215
 GameObject:
@@ -4637,6 +4638,7 @@ GameObject:
   - component: {fileID: 1172930610}
   - component: {fileID: 1172930609}
   - component: {fileID: 1172930608}
+  - component: {fileID: 1172930611}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: CreamZone
@@ -4657,7 +4659,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058597565, y: 1.093749}
+  m_Offset: {x: 0.058597565, y: -0.27151513}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4668,7 +4670,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.1797867, y: 2.1875982}
+  m_Size: {x: 4.1797867, y: 0.03727007}
   m_EdgeRadius: 0
 --- !u!212 &1172930609
 SpriteRenderer:
@@ -4706,8 +4708,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1297161403
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c0ced59eb0176454886bbc0407e71090, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4732,8 +4734,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1172930611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172930607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e973f15f3bf9b54bb8a4ff01b888a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startPosition: 0
+  endPosition: 0
 --- !u!1 &1234863053
 GameObject:
   m_ObjectHideFlags: 0
@@ -5526,11 +5543,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352403672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.8, y: 4.25, z: -0.6105128}
+  m_LocalPosition: {x: -6.76, y: 5.28, z: -0.6105128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1363044713
 GameObject:
@@ -5968,31 +5985,31 @@ MonoBehaviour:
   Retrybutton: {fileID: 1112791974}
   success_Screen: {fileID: 1103916785}
   Successbutton: {fileID: 538429843}
-  House: {fileID: 0}
-  House1: {fileID: 0}
-  Mt: {fileID: 0}
-  Mt2: {fileID: 0}
-  TileMap: {fileID: 0}
-  CreamZone: {fileID: 0}
-  Bird: {fileID: 0}
-  Bird1: {fileID: 0}
-  Bird2: {fileID: 0}
-  Bird3: {fileID: 0}
-  Bird4: {fileID: 0}
-  Bird5: {fileID: 0}
-  Bird6: {fileID: 0}
-  Bird7: {fileID: 0}
-  Bird8: {fileID: 0}
-  Bird9: {fileID: 0}
-  Bird10: {fileID: 0}
-  Bird11: {fileID: 0}
-  Bird12: {fileID: 0}
-  Bird13: {fileID: 0}
-  Bird14: {fileID: 0}
-  Bird15: {fileID: 0}
-  Bird16: {fileID: 0}
-  Bird17: {fileID: 0}
-  Bird18: {fileID: 0}
+  House: {fileID: 725942767}
+  House1: {fileID: 829272806}
+  Mt: {fileID: 329169334}
+  Mt2: {fileID: 971316217}
+  TileMap: {fileID: 1623143533}
+  CreamZone: {fileID: 1172930611}
+  Bird: {fileID: 248978052}
+  Bird1: {fileID: 574635867}
+  Bird2: {fileID: 1417059665}
+  Bird3: {fileID: 1561912942}
+  Bird4: {fileID: 1118374690}
+  Bird5: {fileID: 675579643}
+  Bird6: {fileID: 691359470}
+  Bird7: {fileID: 683069725}
+  Bird8: {fileID: 805473253}
+  Bird9: {fileID: 2067106058}
+  Bird10: {fileID: 1251068859}
+  Bird11: {fileID: 1363044717}
+  Bird12: {fileID: 1314368629}
+  Bird13: {fileID: 1625763950}
+  Bird14: {fileID: 1720022103}
+  Bird15: {fileID: 981027992}
+  Bird16: {fileID: 402283077}
+  Bird17: {fileID: 1266629476}
+  Bird18: {fileID: 1153990566}
 --- !u!4 &1454341959
 Transform:
   m_ObjectHideFlags: 0
@@ -6005,7 +6022,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1467859450
 GameObject:
@@ -9345,7 +9362,7 @@ Transform:
   m_LocalScale: {x: 5, y: 0.2606692, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865422521
 GameObject:
@@ -9376,7 +9393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1865422523
 AudioSource:
