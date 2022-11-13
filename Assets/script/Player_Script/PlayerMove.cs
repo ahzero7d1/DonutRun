@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     public float jumpPower;
     // sound clip
     public AudioClip losingDonutClip;  // 장애물과 충돌 시 도넛 잃는 소리
+    public AudioClip jumpClip;  // 점프 소리
+
 
     private int jumpCount =0;
     private bool isGrounded;
@@ -23,9 +25,6 @@ public class PlayerMove : MonoBehaviour
     Vector3 targetRespawn;
 
     
-
-
-
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -33,8 +32,9 @@ public class PlayerMove : MonoBehaviour
         anim = GetComponent<Animator>();
         target = new Vector3(-3f,-2f,0f);
         targetRespawn = new Vector3(-3f,1.5f,0f);
+        
         // sound
-        playerAudio = GetComponent<AudioSource>();
+        playerAudio = GetComponent<AudioSource>();  // 점프 소리가 기본
 
     }
 
@@ -51,14 +51,15 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetButtonDown("Jump")&&jumpCount<2){//doublejump가 false인 경우 1단점프
             jumpCount++;
 
-           rigid.velocity = Vector2.zero;
+            rigid.velocity = Vector2.zero;
             //rigid.AddForce(new Vector2(0,jumpPower));
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
 
             //Debug.Log("미는힘:" + jumpPower+new Vector2(0,jumpPower));
 
             // sound
-            playerAudio.Play();
+            playerAudio.clip = jumpClip;  // 점프 소리로 변경
+            playerAudio.Play();  // 재생    
 
         }
         else if(Input.GetButtonUp("Jump")&&rigid.velocity.y>0)
@@ -72,6 +73,10 @@ public class PlayerMove : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag =="Obstacle"){
             //GameManager.donutPoint -=1;
+            
+            // sound (도넛 차감되는 소리)
+            playerAudio.clip = losingDonutClip;
+            playerAudio.Play();  // 사운드 재생
             OnDamaged();
         }
         
@@ -99,6 +104,8 @@ public class PlayerMove : MonoBehaviour
     }*/
     
     void OnDamaged(){
+        playerAudio = GetComponent<AudioSource>();  // 점프 소리로 다시 변경
+
         //투명하게 하기
         //놀라는 표정 애니메이션 추가 필요!!
         GameManager.DonutDown();
@@ -106,11 +113,6 @@ public class PlayerMove : MonoBehaviour
         gameObject.layer = 9;
         //놀라는 표정
         anim.SetTrigger("Damaged");
-
-        // sound (도넛 차감되는 소리)
-        playerAudio.clip = losingDonutClip;
-        playerAudio.Play();  // 사운드 재생
-
         sprite.color = new Color(1,0.6f,0.6f,0.8f);
         Invoke("OffDamaged",3);
     }
