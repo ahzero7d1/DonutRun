@@ -92,11 +92,21 @@ public class PlayerMove : MonoBehaviour
             GameManager.isPause = true;
             GameManager.Success();
         }
+
+        else if(collision.gameObject.tag =="CreamZone")
+            GameManager.SlowDown();
     }
+
+    // void OnCollisionStay2D(Collision2D collision){
+    //    if(collision.gameObject.tag =="CreamZone")
+    //        GameManager.SpeedUp();
+    //}
 
     void OnCollisionExit2D(Collision2D collision){
         if(collision.gameObject.tag =="floor")
-        isGrounded =false;
+            isGrounded =false;
+        else if(collision.gameObject.tag == "CreamZone")
+            GameManager.SpeedUp();
     }
 
    /* void OnTriggerEnter2D(Collider2D collision){

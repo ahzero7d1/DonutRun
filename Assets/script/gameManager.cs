@@ -20,6 +20,33 @@ public class gameManager : MonoBehaviour
     public Success_Screen success_Screen;
     public Success_Screen Successbutton;
 
+    //크림존
+    public ScrollingObject House;
+    public ScrollingObject House1;
+    public ScrollingObject Mt;
+    public ScrollingObject Mt2;
+    public repeatt TileMap;
+    public repeatt CreamZone;
+    public repeatt Bird;
+    public repeatt Bird1;
+    public repeatt Bird2;
+    public repeatt Bird3;
+    public repeatt Bird4;
+    public repeatt Bird5;
+    public repeatt Bird6;
+    public repeatt Bird7;
+    public repeatt Bird8;
+    public repeatt Bird9;
+    public repeatt Bird10;
+    public repeatt Bird11;
+    public repeatt Bird12;
+    public repeatt Bird13;
+    public repeatt Bird14;
+    public repeatt Bird15;
+    public repeatt Bird16;
+    public repeatt Bird17;
+    public repeatt Bird18;
+
 
 
     void Awake()
@@ -66,9 +93,64 @@ public class gameManager : MonoBehaviour
         }
     }
 
+    public void SlowDown(){
+        House.speed =3;
+        House1.speed = 3;
+        Mt.speed = 1;
+        Mt2.speed = 1;
+        TileMap.speed = 2.5f;
+        CreamZone.speed = 2.5f;
+        Bird.speed = 2.5f;
+        Bird1.speed = 2.5f;
+        Bird2.speed = 2.5f;
+        Bird3.speed = 2.5f;
+        Bird4.speed = 2.5f;
+        Bird5.speed = 2.5f;
+        Bird6.speed = 2.5f;
+        Bird7.speed = 2.5f;
+        Bird8.speed = 2.5f;
+        Bird9.speed = 2.5f;
+        Bird10.speed = 2.5f;
+        Bird11.speed = 2.5f;
+        Bird12.speed = 2.5f;
+        Bird13.speed = 2.5f;
+        Bird14.speed = 2.5f;
+        Bird15.speed = 2.5f;
+        Bird16.speed = 2.5f;
+        Bird17.speed = 2.5f;
+        Bird18.speed = 2.5f;
+    }
+
+   public void SpeedUp(){
+        House.speed =6;
+        House1.speed = 6;
+        Mt.speed = 2;
+        Mt2.speed = 2;
+        TileMap.speed = 5f;
+        CreamZone.speed = 5f;
+        Bird.speed = 5f;
+        Bird1.speed = 5f;
+        Bird2.speed = 5f;
+        Bird3.speed = 5f;
+        Bird4.speed = 5f;
+        Bird5.speed = 5f;
+        Bird6.speed = 5f;
+        Bird7.speed = 5f;
+        Bird8.speed = 5f;
+        Bird9.speed = 5f;
+        Bird10.speed = 5f;
+        Bird11.speed = 5f;
+        Bird12.speed = 5f;
+        Bird13.speed = 5f;
+        Bird14.speed = 5f;
+        Bird15.speed = 5f;
+        Bird16.speed = 5f;
+        Bird17.speed = 5f;
+        Bird18.speed = 5f;
+    }
+
     public void Restart(){
         Time.timeScale = 1;
         SceneManager.LoadScene("Main");
-
     }
 }
