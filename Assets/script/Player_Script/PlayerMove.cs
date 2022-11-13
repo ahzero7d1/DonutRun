@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -86,16 +86,22 @@ public class PlayerMove : MonoBehaviour
                 jumpCount=0;
                 
             }
+        } 
 
+        else if(collision.gameObject.tag == "Finish"){
+            GameManager.isPause = true;
+            GameManager.Success();
         }
-
-        
     }
 
     void OnCollisionExit2D(Collision2D collision){
         if(collision.gameObject.tag =="floor")
         isGrounded =false;
     }
+
+   /* void OnTriggerEnter2D(Collider2D collision){
+        
+    }*/
     
     void OnDamaged(){
         playerAudio = GetComponent<AudioSource>();  // 점프 소리로 다시 변경
