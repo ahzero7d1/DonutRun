@@ -7,6 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    public void FixedUpdate(){
+        Scene scene = SceneManager.GetActiveScene();
+        Debug.Log(scene.name);
+        
+        if(scene.name == "PrologScene"){
+            Invoke("ChangeToMain",13f);
+        }
+    }
 
     public void ChangeSceneBtnAnim(){
         switch (this.gameObject.name)
@@ -15,14 +23,11 @@ public class ChangeScene : MonoBehaviour
                 SceneManager.LoadScene("PrologScene");
                 break;
         }
-
-
-
     }
 
-    public void changeSceneAnim(){
-        //대화 애니메이션이 다 뜨면(=다른 애니메이션으로 조절) StoryScene -> Main
-        // SceneManager.LoadScene("Main");
+    public void ChangeToMain(){
+        SceneManager.LoadScene("Main");
+
     }
 
 
