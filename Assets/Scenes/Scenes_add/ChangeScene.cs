@@ -15,15 +15,14 @@ public class ChangeScene : MonoBehaviour
             case "StoryButton":
                 SceneManager.LoadScene("StoryScene");
                 break;
-            case "StoryButton2":
-                SceneManager.LoadScene("StoryScene2");
-                break;
-            case "MainButton":
-                SceneManager.LoadScene("SampleScene");
-                break;
         }
 
 
+    }
+
+    public void changeSceneAnim(){
+        //대화 애니메이션이 다 뜨면 StoryScene -> Main
+        // SceneManager.LoadScene("Main");
     }
 
 
