@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -72,16 +72,22 @@ public class PlayerMove : MonoBehaviour
                 jumpCount=0;
                 
             }
+        } 
 
+        else if(collision.gameObject.tag == "Finish"){
+            GameManager.isPause = true;
+            GameManager.Success();
         }
-
-        
     }
 
     void OnCollisionExit2D(Collision2D collision){
         if(collision.gameObject.tag =="floor")
         isGrounded =false;
     }
+
+   /* void OnTriggerEnter2D(Collider2D collision){
+        
+    }*/
     
     void OnDamaged(){
         //투명하게 하기

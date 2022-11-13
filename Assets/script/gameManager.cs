@@ -17,6 +17,7 @@ public class gameManager : MonoBehaviour
     // 엔딩 
     public GameOverScreen GameOverImage;
     public GameOverScreen Retrybutton;
+    public Success_Screen success_Screen;
 
 
 
@@ -45,6 +46,8 @@ public class gameManager : MonoBehaviour
     public void Success(){
         if(isPause == true)
             Time.timeScale=0;
+
+        success_Screen.Setup();
 
         
     }
