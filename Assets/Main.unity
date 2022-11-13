@@ -1609,7 +1609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -69.400024, y: 38.600006}
+  m_AnchoredPosition: {x: -69.400024, y: 38.599976}
   m_SizeDelta: {x: 26.699951, y: 25.7}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &538429840
@@ -2629,7 +2629,7 @@ MonoBehaviour:
   jumpPower: 400
   losingDonutClip: {fileID: 8300000, guid: 1cead25ab522241169774e6f8ee10287, type: 3}
   jumpClip: {fileID: 8300000, guid: f24774d079a514440953868828e5634a, type: 3}
-  jumpClip2: {fileID: 8300000, guid: 668a312bd7b6f41318b0ce53c08bcb7f, type: 3}
+  jumpClip2: {fileID: 8300000, guid: f24774d079a514440953868828e5634a, type: 3}
 --- !u!70 &762545347
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
