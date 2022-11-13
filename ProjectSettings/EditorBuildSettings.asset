@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StoryScene.unity
     guid: a2b92e826d4c4d24fbb80006d0395945
   - enabled: 1
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 7a807eb528ce39d4986ea205ec0ff5a3
+  - enabled: 1
+    path: Assets/Scenes/PrologScene.unity
+    guid: a4fbe364eebc2aa4fb3b56e6a4a576aa
   m_configObjects: {}
